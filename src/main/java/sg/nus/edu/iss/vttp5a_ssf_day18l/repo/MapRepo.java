@@ -19,7 +19,7 @@ public class MapRepo {
     RedisTemplate<String, String> redisTemplate;
 
     public void create(String redisKey, String hashKey, String hashValue){
-        redisTemplate.opsForHash().put(hashKey, hashKey, hashValue);
+        redisTemplate.opsForHash().put(redisKey, hashKey, hashValue);
     }
 
     public Object get(String redisKey, String hashKey){
